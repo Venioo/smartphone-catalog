@@ -12,54 +12,129 @@ import javax.persistence.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "phone")
+@Table(name = "PHONES")
 public class Phone {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "ID")
     private long id;
+
+    @Column(name = "BRAND")
     private String brand;
+
+    @Column(name = "MODEL")
     private String model;
-    private String network_technology;
-    @Column(name = "bands_2G")
+
+    @Column(name = "NETWORK_TECHNOLOGY")
+    private String networks;
+
+    @Column(name = "BANDS_2G")
     private String bands2;
-    @Column(name = "bands_3G")
+
+    @Column(name = "BANDS_3G")
     private String bands3;
-    @Column(name = "bands_4G")
+
+    @Column(name = "BANDS_4G")
     private String bands4;
-    private String network_speed;
+
+    @Column(name = "NETWORK_SPEED")
+    private String networkSpeed;
+
+    @Column(name = "GPRS")
     private String GPRS;
+
+    @Column(name = "EDGE")
     private String EDGE;
-    private String announced;
+
+    @Column(name = "ANNOUNCED")
+    private String announcedDate;
+
+    @Column(name = "STATUS")
     private String status;
-    private String dimentions;
-    private String weight_g;
-    private String weight_oz;
+
+    @Column(name = "DIMENSIONS")
+    private String dimensions;
+
+    @Column(name = "WEIGHT")
+    private String weight;
+
+    @Column(name = "SIM")
     private String SIM;
+
+    @Column(name = "DISPLAY_TYPE")
     private String display_type;
+
+    @Column(name = "DISPLAY_RESOLUTION")
     private String display_resolution;
+
+    @Column(name = "DISPLAY_SIZE")
     private String display_size;
+
+    @Column(name = "OS")
     private String OS;
+
+    @Column(name = "CPU")
     private String CPU;
-    private String Chipset;
+
+    @Column(name = "CHIPSET")
+    private String chipset;
+
+    @Column(name = "GPU")
     private String GPU;
+
+    @Column(name = "MEMORY_CARD")
     private String memory_card;
+
+    @Column(name = "INTERNAL_MEMORY")
     private String internal_memory;
+
+    @Column(name = "RAM")
     private String RAM;
+
+    @Column(name = "PRIMARY_CAMERA")
     private String primary_camera;
+
+    @Column(name = "SECONDARY_CAMERA")
     private String secondary_camera;
+
+    @Column(name = "LOUD_SPEAKER")
     private String loud_speaker;
+
+    @Column(name = "AUDIO_JACK")
     private String audio_jack;
+
+    @Column(name = "WLAN")
     private String WLAN;
+
+    @Column(name = "BLUETOOTH")
     private String bluetooth;
+
+    @Column(name = "GPS")
     private String GPS;
+
+    @Column(name = "NFC")
     private String NFC;
+
+    @Column(name = "RADIO")
     private String radio;
+
+    @Column(name = "USB")
     private String USB;
+
+    @Column(name = "SENSORS")
     private String sensors;
+
+    @Column(name = "BATTERY")
     private String battery;
+
+    @Column(name = "COLORS")
     private String colors;
-    private String approx_price_EUR;
-    private String img_url;
+
+    @Column(name = "PRICE")
+    private String price;
+
+    @Column(name = "IMAGE_URL")
+    private String imageUrl;
 
 }
