@@ -1,6 +1,6 @@
-DROP TABLE IF EXISTS PHONES;
+DROP TABLE IF EXISTS phones;
 
-CREATE TABLE IF NOT EXISTS PHONES (
+CREATE TABLE IF NOT EXISTS phones (
   ID                 VARCHAR(20)  NOT NULL PRIMARY KEY,
   BRAND              VARCHAR(100) NOT NULL,
   MODEL              VARCHAR(100) NOT NULL,
@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS PHONES (
   PRICE              VARCHAR(100) NOT NULL,
   IMAGE_URL          VARCHAR(100)
 );
-INSERT INTO PHONES(ID, BRAND, MODEL, NETWORK_TECHNOLOGY, BANDS_2G, BANDS_3G, BANDS_4G, NETWORK_SPEED, GPRS, EDGE, ANNOUNCED, STATUS, DIMENSIONS, WEIGHT, SIM,
+INSERT INTO phones(ID, BRAND, MODEL, NETWORK_TECHNOLOGY, BANDS_2G, BANDS_3G, BANDS_4G, NETWORK_SPEED, GPRS, EDGE, ANNOUNCED, STATUS, DIMENSIONS, WEIGHT, SIM,
                    DISPLAY_TYPE, DISPLAY_RESOLUTION, DISPLAY_SIZE, OS, CPU, Chipset, GPU, MEMORY_CARD, INTERNAL_MEMORY, RAM, PRIMARY_CAMERA, SECONDARY_CAMERA, LOUD_SPEAKER,
                    AUDIO_JACK, WLAN, BLUETOOTH, GPS, NFC, RADIO, USB, SENSORS, BATTERY, COLORS, PRICE, IMAGE_URL)
 VALUES ('2', 'Acer', 'Iconia Talk S', 'GSM / HSPA / LTE', 'GSM 850 / 900 / 1800 / 1900 - SIM 1 & SIM 2', 'HSDPA 850 / 1900 / 2100',
@@ -52,7 +52,7 @@ VALUES ('2', 'Acer', 'Iconia Talk S', 'GSM / HSPA / LTE', 'GSM 850 / 900 / 1800 
         'Mali-T720MP2', 'microSD  up to 128 GB (dedicated slot)', '16/32 GB', '2 GB RAM', '13 MP| autofocus', '2 MP| 720p', 'Yes', 'Yes',
         'Wi-Fi 802.11 a/b/g/n| Wi-Fi Direct| hotspot', '4.0| A2DP', 'Yes with A-GPS GLONASS', NULL, 'FM radio', 'microUSB 2.0', 'Accelerometer| proximity',
         'Non-removable Li-Ion 3400 mAh battery (12.92 Wh)', 'Black', '170', 'http://cdn2.gsmarena.com/vv/bigpic/acer-iconia-talk-s.jpg');
-INSERT INTO PHONES(ID, BRAND, MODEL, NETWORK_TECHNOLOGY, BANDS_2G, BANDS_3G, BANDS_4G, NETWORK_SPEED, GPRS, EDGE, ANNOUNCED, STATUS, DIMENSIONS, WEIGHT, SIM,
+INSERT INTO phones(ID, BRAND, MODEL, NETWORK_TECHNOLOGY, BANDS_2G, BANDS_3G, BANDS_4G, NETWORK_SPEED, GPRS, EDGE, ANNOUNCED, STATUS, DIMENSIONS, WEIGHT, SIM,
                    DISPLAY_TYPE, DISPLAY_RESOLUTION, DISPLAY_SIZE, OS, CPU, Chipset, GPU, MEMORY_CARD, INTERNAL_MEMORY, RAM, PRIMARY_CAMERA, SECONDARY_CAMERA, LOUD_SPEAKER,
                    AUDIO_JACK, WLAN, BLUETOOTH, GPS, NFC, RADIO, USB, SENSORS, BATTERY, COLORS, PRICE, IMAGE_URL)
 VALUES ('3', 'Acer', 'LiquID Z6 Plus', 'GSM / HSPA / LTE', 'GSM 850 / 900 / 1800 / 1900 - SIM 1 & SIM 2 (dual-SIM MODEL only)', 'HSDPA', 'LTE',
@@ -62,7 +62,7 @@ VALUES ('3', 'Acer', 'LiquID Z6 Plus', 'GSM / HSPA / LTE', 'GSM 850 / 900 / 1800
         'microSD  up to 256 GB (uses SIM 2 slot)', '32 GB', '3 GB RAM', '13 MP| autofocus| LED flash', '5 MP', 'Yes', 'Yes', 'Wi-Fi 802.11 b/g/n| Wi-Fi Direct| hotspot',
         '4.0| A2DP', 'Yes with A-GPS', NULL, 'FM radio', 'microUSB 2.0', 'Fingerprint (front-mounted)| accelerometer| proximity', 'Removable Li-Po 4080 mAh battery',
         'Black| White', '250', 'http://cdn2.gsmarena.com/vv/bigpic/acer-liquID-z6-plus.jpg');
-INSERT INTO PHONES(ID, BRAND, MODEL, NETWORK_TECHNOLOGY, BANDS_2G, BANDS_3G, BANDS_4G, NETWORK_SPEED, GPRS, EDGE, ANNOUNCED, STATUS, DIMENSIONS, WEIGHT, SIM,
+INSERT INTO phones(ID, BRAND, MODEL, NETWORK_TECHNOLOGY, BANDS_2G, BANDS_3G, BANDS_4G, NETWORK_SPEED, GPRS, EDGE, ANNOUNCED, STATUS, DIMENSIONS, WEIGHT, SIM,
                    DISPLAY_TYPE, DISPLAY_RESOLUTION, DISPLAY_SIZE, OS, CPU, Chipset, GPU, MEMORY_CARD, INTERNAL_MEMORY, RAM, PRIMARY_CAMERA, SECONDARY_CAMERA, LOUD_SPEAKER,
                    AUDIO_JACK, WLAN, BLUETOOTH, GPS, NFC, RADIO, USB, SENSORS, BATTERY, COLORS, PRICE, IMAGE_URL)
 VALUES ('4', 'Acer', 'LiquID Z6', 'GSM / HSPA / LTE', 'GSM 850 / 900 / 1800 / 1900 - SIM 1 & SIM 2 (dual-SIM MODEL only)', 'HSDPA', 'LTE', 'HSPA  LTE', 'Yes', 'Yes',
@@ -70,8 +70,8 @@ VALUES ('4', 'Acer', 'LiquID Z6', 'GSM / HSPA / LTE', 'GSM 850 / 900 / 1800 / 19
         'IPS LCD capacitive touchscreen  16M colors', '5.0 inches', '720 x 1280 pixels (~294 ppi pixel density)', 'AndroID 6.0 (Marshmallow)', 'Quad-core 1.25 GHz Cortex-A53',
         'Mediatek MT6737', 'Mali-T720MP2', 'microSD  up to 256 GB', '8 GB', '1 GB RAM', '8 MP| autofocus| LED flash', '2 MP', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes with A-GPS', NULL,
         'FM radio', 'microUSB 2.0', 'Accelerometer| proximity', 'Removable Li-Ion 2000 mAh battery', 'Black| White', '120',
-        'http://cdn2.gsmarena.com/vv/bigpic/acer-liquID-z6.jpg;;;;;');
-INSERT INTO PHONES(ID, BRAND, MODEL, NETWORK_TECHNOLOGY, BANDS_2G, BANDS_3G, BANDS_4G, NETWORK_SPEED, GPRS, EDGE, ANNOUNCED, STATUS, DIMENSIONS, WEIGHT, SIM,
+        'http://cdn2.gsmarena.com/vv/bigpic/acer-liquID-z6.jpg');
+INSERT INTO phones(ID, BRAND, MODEL, NETWORK_TECHNOLOGY, BANDS_2G, BANDS_3G, BANDS_4G, NETWORK_SPEED, GPRS, EDGE, ANNOUNCED, STATUS, DIMENSIONS, WEIGHT, SIM,
                    DISPLAY_TYPE, DISPLAY_RESOLUTION, DISPLAY_SIZE, OS, CPU, Chipset, GPU, MEMORY_CARD, INTERNAL_MEMORY, RAM, PRIMARY_CAMERA, SECONDARY_CAMERA, LOUD_SPEAKER,
                    AUDIO_JACK, WLAN, BLUETOOTH, GPS, NFC, RADIO, USB, SENSORS, BATTERY, COLORS, PRICE, IMAGE_URL)
 VALUES ('5', 'Acer', 'Iconia Tab 10 A3-A40', 'No cellular connectivity', 'N/A', NULL, NULL, NULL, 'No', 'No', '2016  April', 'Available. Released 2016  June',
@@ -79,8 +79,8 @@ VALUES ('5', 'Acer', 'Iconia Tab 10 A3-A40', 'No cellular connectivity', 'N/A', 
         '1920 x 1200 pixels (~224 ppi pixel density)', 'AndroID 6.0 (Marshmallow)', 'Quad-core 1.3 GHz Cortex-A53', 'Mediatek MT8163A', 'Mali-T720 MP2',
         'microSD  up to 256 GB (dedicated slot)', '16/32/64 GB', '2 GB RAM', '5 MP', '2 MP', 'Yes with stereo speakers (4 speakers)', 'Yes',
         'Wi-Fi 802.11 a/b/g/n/ac| dual-band| hotspot', 'Yes', NULL, NULL, 'No', 'microUSB 2.0', 'Accelerometer', 'Non-removable Li-Ion battery', 'Black', '230',
-        'http://cdn2.gsmarena.com/vv/bigpic/acer-iconia-tab-10-a3-a40.jpg;;;;;');
-INSERT INTO PHONES(ID, BRAND, MODEL, NETWORK_TECHNOLOGY, BANDS_2G, BANDS_3G, BANDS_4G, NETWORK_SPEED, GPRS, EDGE, ANNOUNCED, STATUS, DIMENSIONS, WEIGHT, SIM,
+        'http://cdn2.gsmarena.com/vv/bigpic/acer-iconia-tab-10-a3-a40.jpg');
+INSERT INTO phones(ID, BRAND, MODEL, NETWORK_TECHNOLOGY, BANDS_2G, BANDS_3G, BANDS_4G, NETWORK_SPEED, GPRS, EDGE, ANNOUNCED, STATUS, DIMENSIONS, WEIGHT, SIM,
                    DISPLAY_TYPE, DISPLAY_RESOLUTION, DISPLAY_SIZE, OS, CPU, Chipset, GPU, MEMORY_CARD, INTERNAL_MEMORY, RAM, PRIMARY_CAMERA, SECONDARY_CAMERA, LOUD_SPEAKER,
                    AUDIO_JACK, WLAN, BLUETOOTH, GPS, NFC, RADIO, USB, SENSORS, BATTERY, COLORS, PRICE, IMAGE_URL)
 VALUES ('6', 'Acer', 'LiquID X2', 'GSM / HSPA / LTE', 'GSM 850 / 900 / 1800 / 1900', 'HSDPA 900 / 1900 / 2100 - Europe| Taiwan', 'LTE 800 / 1800 / 2100 / 2600 - Europe',
@@ -89,8 +89,8 @@ VALUES ('6', 'Acer', 'LiquID X2', 'GSM / HSPA / LTE', 'GSM 850 / 900 / 1800 / 19
         'AndroID 5.1 (Lollipop)', 'Octa-core 1.3 GHz Cortex-A53', 'Mediatek MT6753', 'Mali-T720MP4', 'microSD  up to 32 GB (dedicated slot)', '32 GB', '3 GB RAM',
         '13 MP| f/1.8| autofocus| LED flash|', '13 MP| f/1.8| autofocus| LED flash', 'Yes', 'Yes', 'Wi-Fi 802.11 b/g/n| hotspot', '4.0| A2DP| LE', 'Yes with A-GPS', NULL,
         'FM radio', 'microUSB 2.0', 'Accelerometer| proximity| compass', 'Removable Li-Po 4020 mAh battery', 'Black| Gold', '230',
-        'http://cdn2.gsmarena.com/vv/bigpic/acer-liquID-x2-1.jpg;;;;;');
-INSERT INTO PHONES(ID, BRAND, MODEL, NETWORK_TECHNOLOGY, BANDS_2G, BANDS_3G, BANDS_4G, NETWORK_SPEED, GPRS, EDGE, ANNOUNCED, STATUS, DIMENSIONS, WEIGHT, SIM,
+        'http://cdn2.gsmarena.com/vv/bigpic/acer-liquID-x2-1.jpg');
+INSERT INTO phones(ID, BRAND, MODEL, NETWORK_TECHNOLOGY, BANDS_2G, BANDS_3G, BANDS_4G, NETWORK_SPEED, GPRS, EDGE, ANNOUNCED, STATUS, DIMENSIONS, WEIGHT, SIM,
                    DISPLAY_TYPE, DISPLAY_RESOLUTION, DISPLAY_SIZE, OS, CPU, Chipset, GPU, MEMORY_CARD, INTERNAL_MEMORY, RAM, PRIMARY_CAMERA, SECONDARY_CAMERA, LOUD_SPEAKER,
                    AUDIO_JACK, WLAN, BLUETOOTH, GPS, NFC, RADIO, USB, SENSORS, BATTERY, COLORS, PRICE, IMAGE_URL)
 VALUES ('8', 'Acer', 'LiquID Zest Plus', 'GSM / HSPA / LTE', 'GSM 850 / 900 / 1800 / 1900 - SIM 1 & SIM 2 (dual-SIM MODEL only)', 'HSDPA', 'LTE', 'HSPA  LTE', 'Yes', 'Yes',
@@ -98,8 +98,8 @@ VALUES ('8', 'Acer', 'LiquID Zest Plus', 'GSM / HSPA / LTE', 'GSM 850 / 900 / 18
         'IPS LCD capacitive touchscreen  16M colors', '5.5 inches (~70.3% screen-to-body ratio)', '720 x 1280 pixels (~267 ppi pixel density)', 'AndroID 6.0 (Marshmallow)',
         'Quad-core 1.3 GHz Cortex-A53', 'Mediatek MT6735', 'Mali-T720MP2', 'microSD (dedicated slot)', '16 GB', '2 GB RAM', '13 MP| phase detection/laser autofocus| LED flash',
         '5 MP', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes with A-GPS', NULL, 'FM radio', 'microUSB 2.0', 'Accelerometer| proximity| compass', 'Non-removable Li-Ion 5000 mAh battery',
-        'Blue| White', '200', 'http://cdn2.gsmarena.com/vv/bigpic/acer-liquID-zest-plus-z628.jpg;;;;;');
-INSERT INTO PHONES(ID, BRAND, MODEL, NETWORK_TECHNOLOGY, BANDS_2G, BANDS_3G, BANDS_4G, NETWORK_SPEED, GPRS, EDGE, ANNOUNCED, STATUS, DIMENSIONS, WEIGHT, SIM,
+        'Blue| White', '200', 'http://cdn2.gsmarena.com/vv/bigpic/acer-liquID-zest-plus-z628.jpg');
+INSERT INTO phones(ID, BRAND, MODEL, NETWORK_TECHNOLOGY, BANDS_2G, BANDS_3G, BANDS_4G, NETWORK_SPEED, GPRS, EDGE, ANNOUNCED, STATUS, DIMENSIONS, WEIGHT, SIM,
                    DISPLAY_TYPE, DISPLAY_RESOLUTION, DISPLAY_SIZE, OS, CPU, Chipset, GPU, MEMORY_CARD, INTERNAL_MEMORY, RAM, PRIMARY_CAMERA, SECONDARY_CAMERA, LOUD_SPEAKER,
                    AUDIO_JACK, WLAN, BLUETOOTH, GPS, NFC, RADIO, USB, SENSORS, BATTERY, COLORS, PRICE, IMAGE_URL)
 VALUES ('9', 'Acer', 'LiquID Zest', 'GSM / HSPA / LTE', 'GSM 850 / 900 / 1800 / 1900 - SIM 1 & SIM 2 (dual-SIM MODEL only)', 'HSDPA 850 / 900 / 1900 / 2100', 'LTE',
@@ -108,16 +108,16 @@ VALUES ('9', 'Acer', 'LiquID Zest', 'GSM / HSPA / LTE', 'GSM 850 / 900 / 1800 / 
         '720 x 1280 pixels (~294 ppi pixel density)', 'AndroID 6.0 (Marshmallow)', 'Quad-core 1.3 GHz - Z525', 'Mediatek MT6580 - Z525', 'Mali-400MP2 - Z525',
         'microSD  up to 32 GB (dedicated slot)', '8 GB', '1 GB RAM', '8 MP| f/2.0| autofocus| LED flash', '5 MP', 'Yes', 'Yes', 'Yes', '4.0| A2DP', 'Yes with A-GPS', NULL,
         'FM radio', 'microUSB 2.0', 'Accelerometer| proximity| compass', 'Removable Li-Ion 2000 mAh battery', 'Black| White', '110',
-        'http://cdn2.gsmarena.com/vv/bigpic/acer-zest.jpg;;;;;');
-INSERT INTO PHONES(ID, BRAND, MODEL, NETWORK_TECHNOLOGY, BANDS_2G, BANDS_3G, BANDS_4G, NETWORK_SPEED, GPRS, EDGE, ANNOUNCED, STATUS, DIMENSIONS, WEIGHT, SIM,
+        'http://cdn2.gsmarena.com/vv/bigpic/acer-zest.jpg');
+INSERT INTO phones(ID, BRAND, MODEL, NETWORK_TECHNOLOGY, BANDS_2G, BANDS_3G, BANDS_4G, NETWORK_SPEED, GPRS, EDGE, ANNOUNCED, STATUS, DIMENSIONS, WEIGHT, SIM,
                    DISPLAY_TYPE, DISPLAY_RESOLUTION, DISPLAY_SIZE, OS, CPU, Chipset, GPU, MEMORY_CARD, INTERNAL_MEMORY, RAM, PRIMARY_CAMERA, SECONDARY_CAMERA, LOUD_SPEAKER,
                    AUDIO_JACK, WLAN, BLUETOOTH, GPS, NFC, RADIO, USB, SENSORS, BATTERY, COLORS, PRICE, IMAGE_URL)
 VALUES ('10', 'Acer', 'Predator 8', 'No cellular connectivity', 'N/A', NULL, NULL, NULL, 'No', 'No', '2015  September', 'Available. Released 2015  November',
         '217.9 x 127 x 8.6 mm (8.58 x 5.0 x 0.34 in)', '353.8', 'No', 'IPS LCD capacitive touchscreen  16M colors', '8.0 inches (~67.1% screen-to-body ratio)',
         '1920 x 1200 pixels (~283 ppi pixel density)', 'AndroID 5.0 (Lollipop)', 'Quad-core 1.6 GHz', 'Intel Atom x7-Z8700', NULL, 'microSD  up to 256 GB (dedicated slot)',
         '32/64 GB', '2 GB RAM', '5 MP', '2 MP', 'Yes with stereo speakers (4 speakers)', 'Yes', 'Wi-Fi 802.11 a/b/g/n', '4.0| A2DP| LE', NULL, NULL, 'No', 'microUSB 2.0', 'Yes',
-        'Non-removable Li-Po 4420 mAh battery', 'Black/Silver', '350', 'http://cdn2.gsmarena.com/vv/bigpic/acer-predator-8.jpg;;;;;');
-INSERT INTO PHONES(ID, BRAND, MODEL, NETWORK_TECHNOLOGY, BANDS_2G, BANDS_3G, BANDS_4G, NETWORK_SPEED, GPRS, EDGE, ANNOUNCED, STATUS, DIMENSIONS, WEIGHT, SIM,
+        'Non-removable Li-Po 4420 mAh battery', 'Black/Silver', '350', 'http://cdn2.gsmarena.com/vv/bigpic/acer-predator-8.jpg');
+INSERT INTO phones(ID, BRAND, MODEL, NETWORK_TECHNOLOGY, BANDS_2G, BANDS_3G, BANDS_4G, NETWORK_SPEED, GPRS, EDGE, ANNOUNCED, STATUS, DIMENSIONS, WEIGHT, SIM,
                    DISPLAY_TYPE, DISPLAY_RESOLUTION, DISPLAY_SIZE, OS, CPU, Chipset, GPU, MEMORY_CARD, INTERNAL_MEMORY, RAM, PRIMARY_CAMERA, SECONDARY_CAMERA, LOUD_SPEAKER,
                    AUDIO_JACK, WLAN, BLUETOOTH, GPS, NFC, RADIO, USB, SENSORS, BATTERY, COLORS, PRICE, IMAGE_URL)
 VALUES ('11', 'Acer', 'LiquID Jade Primo', 'GSM / HSPA / LTE', 'GSM 850 / 900 / 1800 / 1900 - SIM 1 & SIM 2', 'HSDPA 850 / 900 / 1900 / 2100 - Europe/ Taiwan',
@@ -127,8 +127,8 @@ VALUES ('11', 'Acer', 'LiquID Jade Primo', 'GSM / HSPA / LTE', 'GSM 850 / 900 / 
         'Hexa-core (4x1.4 GHz Cortex-A53 & 2x1.8 GHz Cortex-A57)', 'Qualcomm MSM8992 Snapdragon 808', 'Adreno 418', 'microSD  up to 256 GB (uses SIM 2 slot)', '32 GB', '3 GB RAM',
         '21 MP| f/2.2| autofocus| dual-LED flash|', '8 MP| f/2.2| 1080p@30fps', 'Yes', 'Yes', 'Wi-Fi 802.11 a/b/g/n/ac| dual-band| WiFi Direct| hotspot', '4.0| A2DP| LE| EDR',
         'Yes with A-GPS', NULL, 'FM radio', '3.1| Type-C 1.0 reversible connector', 'Accelerometer| gyro| proximity| compass', 'Non-removable Li-Po 2870 mAh battery', 'Black',
-        '220', 'http://cdn2.gsmarena.com/vv/bigpic/acer-liquID-jade-primo-.jpg;;;;;');
-INSERT INTO PHONES(ID, BRAND, MODEL, NETWORK_TECHNOLOGY, BANDS_2G, BANDS_3G, BANDS_4G, NETWORK_SPEED, GPRS, EDGE, ANNOUNCED, STATUS, DIMENSIONS, WEIGHT, SIM,
+        '220', 'http://cdn2.gsmarena.com/vv/bigpic/acer-liquID-jade-primo-.jpg');
+INSERT INTO phones(ID, BRAND, MODEL, NETWORK_TECHNOLOGY, BANDS_2G, BANDS_3G, BANDS_4G, NETWORK_SPEED, GPRS, EDGE, ANNOUNCED, STATUS, DIMENSIONS, WEIGHT, SIM,
                    DISPLAY_TYPE, DISPLAY_RESOLUTION, DISPLAY_SIZE, OS, CPU, Chipset, GPU, MEMORY_CARD, INTERNAL_MEMORY, RAM, PRIMARY_CAMERA, SECONDARY_CAMERA, LOUD_SPEAKER,
                    AUDIO_JACK, WLAN, BLUETOOTH, GPS, NFC, RADIO, USB, SENSORS, BATTERY, COLORS, PRICE, IMAGE_URL)
 VALUES ('12', 'Acer', 'LiquID Z330', 'GSM / HSPA / LTE', 'GSM 850 / 900 / 1800 / 1900 - SIM 1 & SIM 2 (dual-SIM MODEL only)', 'HSDPA', 'LTE', 'HSPA  LTE', 'Yes', 'Yes',
@@ -136,8 +136,8 @@ VALUES ('12', 'Acer', 'LiquID Z330', 'GSM / HSPA / LTE', 'GSM 850 / 900 / 1800 /
         'Single SIM (Micro-SIM) or Dual SIM (Micro-SIM| dual stand-by)', 'IPS LCD capacitive touchscreen  16M colors', '4.5 inches (~61.7% screen-to-body ratio)',
         '480 x 854 pixels (~218 ppi pixel density)', 'AndroID 5.1 (Lollipop)', 'Quad-core 1.1 GHz Cortex-A7', 'Qualcomm MSM8909 Snapdragon 210', 'Adreno 304',
         'microSD (dedicated slot)', '8 GB', '1 GB RAM', '5 MP| autofocus| LED flash', '5 MP', 'Yes', 'Yes', 'Yes', '4.0| A2DP', 'Yes with A-GPS', NULL, 'FM radio', 'microUSB 2.0',
-        'Accelerometer| proximity', 'Removable Li-Ion 2000 mAh battery', 'Mystic Black| Pure White', '110', 'http://cdn2.gsmarena.com/vv/bigpic/acer-liquID-z320-z330.jpg;;;;;');
-INSERT INTO PHONES(ID, BRAND, MODEL, NETWORK_TECHNOLOGY, BANDS_2G, BANDS_3G, BANDS_4G, NETWORK_SPEED, GPRS, EDGE, ANNOUNCED, STATUS, DIMENSIONS, WEIGHT, SIM,
+        'Accelerometer| proximity', 'Removable Li-Ion 2000 mAh battery', 'Mystic Black| Pure White', '110', 'http://cdn2.gsmarena.com/vv/bigpic/acer-liquID-z320-z330.jpg');
+INSERT INTO phones(ID, BRAND, MODEL, NETWORK_TECHNOLOGY, BANDS_2G, BANDS_3G, BANDS_4G, NETWORK_SPEED, GPRS, EDGE, ANNOUNCED, STATUS, DIMENSIONS, WEIGHT, SIM,
                    DISPLAY_TYPE, DISPLAY_RESOLUTION, DISPLAY_SIZE, OS, CPU, Chipset, GPU, MEMORY_CARD, INTERNAL_MEMORY, RAM, PRIMARY_CAMERA, SECONDARY_CAMERA, LOUD_SPEAKER,
                    AUDIO_JACK, WLAN, BLUETOOTH, GPS, NFC, RADIO, USB, SENSORS, BATTERY, COLORS, PRICE, IMAGE_URL)
 VALUES ('13', 'Acer', 'LiquID Z320', 'GSM / HSPA', 'GSM 850 / 900 / 1800 / 1900 - SIM 1 & SIM 2 (dual-SIM MODEL only)', 'HSDPA', NULL, 'HSPA 42.2/5.76 Mbps', 'Yes', 'Yes',
@@ -145,8 +145,8 @@ VALUES ('13', 'Acer', 'LiquID Z320', 'GSM / HSPA', 'GSM 850 / 900 / 1800 / 1900 
         'Single SIM (Micro-SIM) or Dual SIM (Micro-SIM| dual stand-by)', 'IPS LCD capacitive touchscreen  16M colors', '4.5 inches (~61.7% screen-to-body ratio)',
         '480 x 854 pixels (~218 ppi pixel density)', 'AndroID 5.1 (Lollipop)', 'Quad-core 1.0 GHz Cortex-A7', 'Qualcomm MSM8909 Snapdragon 210', 'Adreno 304',
         'microSD (dedicated slot)', '8 GB', '1 GB RAM', '5 MP| autofocus| LED flash', '2 MP', 'Yes', 'Yes', 'Yes', '4.0| A2DP', 'Yes with A-GPS', NULL, 'FM radio', 'microUSB 2.0',
-        'Accelerometer| proximity', 'Removable Li-Po 2000 mAh battery', 'Pure White', '90', 'http://cdn2.gsmarena.com/vv/bigpic/acer-liquID-z320-z330.jpg;;;;;');
-INSERT INTO PHONES(ID, BRAND, MODEL, NETWORK_TECHNOLOGY, BANDS_2G, BANDS_3G, BANDS_4G, NETWORK_SPEED, GPRS, EDGE, ANNOUNCED, STATUS, DIMENSIONS, WEIGHT, SIM,
+        'Accelerometer| proximity', 'Removable Li-Po 2000 mAh battery', 'Pure White', '90', 'http://cdn2.gsmarena.com/vv/bigpic/acer-liquID-z320-z330.jpg');
+INSERT INTO phones(ID, BRAND, MODEL, NETWORK_TECHNOLOGY, BANDS_2G, BANDS_3G, BANDS_4G, NETWORK_SPEED, GPRS, EDGE, ANNOUNCED, STATUS, DIMENSIONS, WEIGHT, SIM,
                    DISPLAY_TYPE, DISPLAY_RESOLUTION, DISPLAY_SIZE, OS, CPU, Chipset, GPU, MEMORY_CARD, INTERNAL_MEMORY, RAM, PRIMARY_CAMERA, SECONDARY_CAMERA, LOUD_SPEAKER,
                    AUDIO_JACK, WLAN, BLUETOOTH, GPS, NFC, RADIO, USB, SENSORS, BATTERY, COLORS, PRICE, IMAGE_URL)
 VALUES ('15', 'Acer', 'LiquID Z630', 'GSM / HSPA / LTE', 'GSM 850 / 900 / 1800 / 1900 - SIM 1 & SIM 2 (dual-SIM MODEL only)', 'HSDPA', 'LTE', 'HSPA  LTE', 'Yes', 'Yes',
@@ -154,4 +154,4 @@ VALUES ('15', 'Acer', 'LiquID Z630', 'GSM / HSPA / LTE', 'GSM 850 / 900 / 1800 /
         'Single SIM (Micro-SIM) or Dual SIM (Micro-SIM| dual stand-by)', 'IPS LCD capacitive touchscreen  16M colors', '5.5 inches (~68.8% screen-to-body ratio)',
         '720 x 1280 pixels (~267 ppi pixel density)', 'AndroID 5.1 (Lollipop)', 'Quad-core 1.3 GHz Cortex-A53', 'Mediatek MT6735', 'Mali-T720MP2', 'microSD (dedicated slot)',
         '8 GB', '1 GB RAM', '8 MP| autofocus| LED flash', '8 MP', 'Yes', 'Yes', 'Yes', '4.0| A2DP', 'Yes with A-GPS', NULL, 'FM radio', 'microUSB 2.0| USB On-The-Go',
-        'Accelerometer| proximity| compass', 'Removable Li-Ion 4000 mAh battery', 'Black', '200', 'http://cdn2.gsmarena.com/vv/bigpic/acer-liquID-z630.jpg;;;;;');
+        'Accelerometer| proximity| compass', 'Removable Li-Ion 4000 mAh battery', 'Black', '200', 'http://cdn2.gsmarena.com/vv/bigpic/acer-liquID-z630.jpg');
