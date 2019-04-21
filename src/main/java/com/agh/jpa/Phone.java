@@ -63,13 +63,13 @@ public class Phone {
     private String SIM;
 
     @Column(name = "DISPLAY_TYPE")
-    private String display_type;
+    private String displayType;
 
     @Column(name = "DISPLAY_RESOLUTION")
-    private String display_resolution;
+    private String displayResolution;
 
     @Column(name = "DISPLAY_SIZE")
-    private String display_size;
+    private String displaySize;
 
     @Column(name = "OS")
     private String OS;
@@ -84,25 +84,25 @@ public class Phone {
     private String GPU;
 
     @Column(name = "MEMORY_CARD")
-    private String memory_card;
+    private String memoryCard;
 
     @Column(name = "INTERNAL_MEMORY")
-    private String internal_memory;
+    private String internalMemory;
 
     @Column(name = "RAM")
     private String RAM;
 
     @Column(name = "PRIMARY_CAMERA")
-    private String primary_camera;
+    private String primaryCamera;
 
     @Column(name = "SECONDARY_CAMERA")
-    private String secondary_camera;
+    private String secondaryCamera;
 
     @Column(name = "LOUD_SPEAKER")
-    private String loud_speaker;
+    private String loudSpeaker;
 
     @Column(name = "AUDIO_JACK")
-    private String audio_jack;
+    private String audioJack;
 
     @Column(name = "WLAN")
     private String WLAN;

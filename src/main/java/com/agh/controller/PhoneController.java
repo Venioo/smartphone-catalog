@@ -4,11 +4,10 @@ import com.agh.jpa.Phone;
 import com.agh.repository.PhoneRepository;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @Getter
@@ -25,5 +24,12 @@ public class PhoneController {
     @GetMapping("/phones")
     public List<Phone> getPhones() {
         return (List<Phone>) phoneRepository.findAll();
+    }
+
+    @GetMapping("/phones/{id}")
+    public Optional<Phone> getPhone(
+            @PathVariable
+                    Long id) {
+        return phoneRepository.findById(id);
     }
 }
