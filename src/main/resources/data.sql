@@ -155,3 +155,13 @@ VALUES ('15', 'Acer', 'LiquID Z630', 'GSM / HSPA / LTE', 'GSM 850 / 900 / 1800 /
         '720 x 1280 pixels (~267 ppi pixel density)', 'AndroID 5.1 (Lollipop)', 'Quad-core 1.3 GHz Cortex-A53', 'Mediatek MT6735', 'Mali-T720MP2', 'microSD (dedicated slot)',
         '8 GB', '1 GB RAM', '8 MP| autofocus| LED flash', '8 MP', 'Yes', 'Yes', 'Yes', '4.0| A2DP', 'Yes with A-GPS', NULL, 'FM radio', 'microUSB 2.0| USB On-The-Go',
         'Accelerometer| proximity| compass', 'Removable Li-Ion 4000 mAh battery', 'Black', '200', 'http://cdn2.gsmarena.com/vv/bigpic/acer-liquID-z630.jpg');
+
+INSERT INTO phones(ID, BRAND, MODEL, NETWORK_TECHNOLOGY, BANDS_2G, BANDS_3G, BANDS_4G, NETWORK_SPEED, GPRS, EDGE, ANNOUNCED, STATUS, DIMENSIONS, WEIGHT, SIM,
+                   DISPLAY_TYPE, DISPLAY_RESOLUTION, DISPLAY_SIZE, OS, CPU, Chipset, GPU, MEMORY_CARD, INTERNAL_MEMORY, RAM, PRIMARY_CAMERA, SECONDARY_CAMERA, LOUD_SPEAKER,
+                   AUDIO_JACK, WLAN, BLUETOOTH, GPS, NFC, RADIO, USB, SENSORS, BATTERY, COLORS, PRICE, IMAGE_URL)
+VALUES ('16', 'Samsung', 'LiquID Z630', 'GSM / HSPA / LTE', 'GSM 850 / 900 / 1800 / 1900 - SIM 1 & SIM 2 (dual-SIM MODEL only)', 'HSDPA', 'LTE', 'HSPA  LTE', 'Yes', 'Yes',
+        '2015  September', 'Available. Released 2015  September', '156.3 x 77.5 x 8.9 mm (6.15 x 3.05 x 0.35 in)', '165',
+        'Single SIM (Micro-SIM) or Dual SIM (Micro-SIM| dual stand-by)', 'IPS LCD capacitive touchscreen  16M colors', '5.5 inches (~68.8% screen-to-body ratio)',
+        '720 x 1280 pixels (~267 ppi pixel density)', 'AndroID 5.1 (Lollipop)', 'Quad-core 1.3 GHz Cortex-A53', 'Mediatek MT6735', 'Mali-T720MP2', 'microSD (dedicated slot)',
+        '8 GB', '1 GB RAM', '8 MP| autofocus| LED flash', '8 MP', 'Yes', 'Yes', 'Yes', '4.0| A2DP', 'Yes with A-GPS', NULL, 'FM radio', 'microUSB 2.0| USB On-The-Go',
+        'Accelerometer| proximity| compass', 'Removable Li-Ion 4000 mAh battery', 'Black', '200', 'http://cdn2.gsmarena.com/vv/bigpic/acer-liquID-z630.jpg');
