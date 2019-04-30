@@ -58,4 +58,10 @@ public class PhoneController {
         Pageable pageable = PageRequest.of(page, size);
         return phoneRepository.findAll(pageable);
     }
+
+    @GetMapping("/phones/page/search")
+    public Page<Phone> getPhonesModelsSearched(@RequestParam String searchInput, @RequestParam("page") int page, @RequestParam("size") int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        return phoneRepository.findPhonesByBrandOrModel(searchInput.toLowerCase(), pageable);
+    }
 }

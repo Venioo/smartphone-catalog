@@ -22,6 +22,9 @@ public interface PhoneRepository extends CrudRepository<Phone, Long> {
     @Query("SELECT p FROM Phone p WHERE brand = :brand AND model = :model")
     Phone findPhoneByBrandAndModel(@Param("brand") String brand, @Param("model") String model);
 
+    @Query("SELECT p FROM Phone p WHERE LOWER(brand) LIKE %:searchInput% OR LOWER(model) LIKE %:searchInput%")
+    Page<Phone> findPhonesByBrandOrModel(@Param("searchInput") String searchInput, Pageable pageable);
+
     Page<Phone> findAll(Pageable pageable);
 
 
