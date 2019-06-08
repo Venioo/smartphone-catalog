@@ -17,7 +17,8 @@ import java.util.Random;
 @AllArgsConstructor
 public class PhoneAHP {
 
-    public final int nrOfVariables = 6;
+    public final int nrOfVariables = 5;
+    public final int nrOfComparision = nrOfVariables * (nrOfVariables - 1) / 2;
 
     private double minCost;
     private double maxCost;
@@ -31,21 +32,10 @@ public class PhoneAHP {
 
     private double minRAM;
 
-    private double minBattery;
-
     private boolean amongCost(String price) {
         try {
             double p = Double.parseDouble(price);
             return (p >= minCost && p <= maxCost);
-        } catch (Exception e) {
-            return false;
-        }
-    }
-
-    private boolean isBiggerBattery(String battery) {
-        try {
-            double b = Double.parseDouble(battery);
-            return b >= minBattery;
         } catch (Exception e) {
             return false;
         }
@@ -83,7 +73,6 @@ public class PhoneAHP {
         array[2] = amongDisplaySize(phone.getDisplaySize());
         array[3] = isOS(phone.getOS());
         array[4] = moreRAM(phone.getRAM());
-        array[5] = isBiggerBattery(phone.getBattery());
         return array;
     }
 
@@ -124,7 +113,7 @@ public class PhoneAHP {
     }
 
     public List<Phone> findBestPhones(List<Phone> phones, double[] compareValues) {
-        if (compareValues.length != 15) {
+        if (compareValues.length != nrOfComparision) {
             throw new IllegalArgumentException("Incorrect size of compareValues");
         }
         AHP ahp = new AHP(nrOfVariables);
@@ -140,9 +129,9 @@ public class PhoneAHP {
     }
 
     public static void main(String args[]) {
-        double[] compareValues = new double[15];
+        double[] compareValues = new double[10];
         Random rand = new Random();
-        for (int i = 0; i < 15; i++) {
+        for (int i = 0; i < 10; i++) {
             compareValues[i] = rand.nextDouble() * 9;
         }
         Phone p1 = new Phone();
@@ -180,7 +169,6 @@ public class PhoneAHP {
         PhoneAHP phoneAHP = new PhoneAHP();
         phoneAHP.minCost = 1000;
         phoneAHP.maxCost = 1600;
-        phoneAHP.minBattery = 4000;
         phoneAHP.minDisplaySize = 5.0;
         phoneAHP.maxDisplaySize = 6.0;
         phoneAHP.minYear = 2010;

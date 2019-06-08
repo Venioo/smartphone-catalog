@@ -1,5 +1,7 @@
 package com.agh.controller;
 
+import com.agh.ahp.PairwisePhones;
+import com.agh.ahp.PhoneAHP;
 import com.agh.jpa.Phone;
 import com.agh.repository.PhoneRepository;
 import lombok.Getter;
@@ -7,12 +9,9 @@ import lombok.Setter;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -63,5 +62,29 @@ public class PhoneController {
     public Page<Phone> getPhonesModelsSearched(@RequestParam String searchInput, @RequestParam("page") int page, @RequestParam("size") int size) {
         Pageable pageable = PageRequest.of(page, size);
         return phoneRepository.findPhonesByBrandOrModel(searchInput.toLowerCase(), pageable);
+    }
+
+    @RequestMapping(value = "/phones/pwcomparison", method = {RequestMethod.POST}, consumes = {"application/json"})
+    public List<Phone> getPhonePwComparison(@RequestBody PairwisePhones pwc) throws IllegalArgumentException {
+        List<Phone> phones = new ArrayList<>();
+        if (pwc.getPhonesList().isEmpty()) {
+            phones = getPhones();
+        } else {
+            for (Long id : pwc.getPhonesList()) {
+                phones.add(getPhone(id).orElseThrow(() -> new IllegalArgumentException("Wrong id")));
+            }
+        }
+        PhoneAHP phoneAHP = new PhoneAHP();
+        phoneAHP.setMinCost(pwc.getMinCost());
+        phoneAHP.setMaxCost(pwc.getMaxCost());
+        phoneAHP.setMinDisplaySize(pwc.getMinDisplay());
+        phoneAHP.setMaxDisplaySize(pwc.getMaxDisplay());
+        phoneAHP.setMinYear(pwc.getMinYear());
+        phoneAHP.setMinRAM(pwc.getMinRam());
+        phoneAHP.setTheOS(pwc.getOS());
+
+        double[] compareValues = pwc.setWeights();
+
+        return phoneAHP.findBestPhones(phones, compareValues);
     }
 }
