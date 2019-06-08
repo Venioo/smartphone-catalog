@@ -67,7 +67,7 @@ public class PhoneController {
     @RequestMapping(value = "/phones/pwcomparison", method = {RequestMethod.POST}, consumes = {"application/json"})
     public List<Phone> getPhonePwComparison(@RequestBody PairwisePhones pwc) throws IllegalArgumentException {
         List<Phone> phones = new ArrayList<>();
-        if (pwc.getPhonesList().isEmpty()) {
+        if (pwc.getPhonesList() == null || pwc.getPhonesList().isEmpty()) {
             phones = getPhones();
         } else {
             for (Long id : pwc.getPhonesList()) {

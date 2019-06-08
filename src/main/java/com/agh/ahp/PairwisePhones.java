@@ -6,7 +6,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.List;
-import java.util.Random;
 
 @Getter
 @Setter
@@ -80,26 +79,37 @@ public class PairwisePhones {
         return "";
     }
 
+    private double setOneWeight(Weight w, String firstParameterCode, String secondParameterCode) {
+        if (w.contains(secondParameterCode)) {
+            return w.containsOnFirst(firstParameterCode) ? w.getPwCWeight() : w.getInversPwCWeight();
+        } else {
+            return 9;
+        }
+    }
+
     public double[] setWeights() {
         double[] comparedWeights = new double[10];
-        /*
-        "costToYear":"1",
-        "costToDisplay":"1",
-        "costToOS":"1",
-        "costToRam":"1",
-        "yearToDisplay":"1",
-        "yearToOS":"1",
-        "yearToRam":"1",
-        "displayToOS":"1",
-        "displayToRam":"1",
-        "osToRam":"1"
-        */
-        for (Weight w : weightList) {
-
-        }
-        Random rand = new Random();
+        //just for safe
         for (int i = 0; i < 10; i++) {
-            comparedWeights[i] = rand.nextDouble() * 9;
+            comparedWeights[i] = 1;
+        }
+
+        for (Weight w : weightList) {
+            if (w.contains("price")) {
+                comparedWeights[0] = setOneWeight(w, "price", "announcedDate");
+                comparedWeights[1] = setOneWeight(w, "price", "displaySize");
+                comparedWeights[2] = setOneWeight(w, "price", "os");
+                comparedWeights[3] = setOneWeight(w, "price", "ram");
+            } else if (w.contains("announcedDate")) {
+                comparedWeights[4] = setOneWeight(w, "announcedDate", "displaySize");
+                comparedWeights[5] = setOneWeight(w, "announcedDate", "os");
+                comparedWeights[6] = setOneWeight(w, "announcedDate", "ram");
+            } else if (w.contains("displaySize")) {
+                comparedWeights[7] = setOneWeight(w, "displaySize", "os");
+                comparedWeights[8] = setOneWeight(w, "displaySize", "ram");
+            } else if (w.contains("os")) {
+                comparedWeights[9] = setOneWeight(w, "os", "ram");
+            }
         }
         return comparedWeights;
     }

@@ -48,4 +48,19 @@ public class Weight {
         }
         return "";
     }
+
+    public boolean containsOnFirst(String code) {
+        return firstParameter.getCode().equals(code);
+    }
+
+    public double getPwCWeight() {
+        double w = Double.parseDouble(weight);
+        return w>=0 ? (w*8/9)+1 : (w*8/9)/9+1;
+    }
+
+    public double getInversPwCWeight() {
+        double w = Double.parseDouble(weight);
+        w = -w;
+        return w>=0 ? (w*8/9)+1 : (w*8/9)/9+1;
+    }
 }

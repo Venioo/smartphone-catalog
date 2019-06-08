@@ -41,29 +41,38 @@ public class PhoneAHP {
         }
     }
 
-    private boolean moreRAM(String ram) {
+    private boolean biggerFirstDouble(String actual, Double expected) {
         try {
-            double r = Double.parseDouble(ram);
-            return r >= minRAM;
+            String splited[] = actual.split(" ");
+            double r = Double.parseDouble(splited[0]);
+            return r >= expected;
         } catch (Exception e) {
             return false;
         }
     }
 
+    private boolean moreRAM(String ram) {
+        return biggerFirstDouble(ram, minRAM);
+    }
+
     private boolean isOS(String os) {
-        return os.equals(theOS);
+        return os.toLowerCase().contains(theOS.toLowerCase());
     }
 
 
     private boolean amongDisplaySize(String displaySize) {
-        //TODO
-        return false;
+        try {
+            String splited[] = displaySize.split(" ");
+            double size = Double.parseDouble(splited[0]);
+            return size >= minDisplaySize && size <= maxDisplaySize;
+        } catch (Exception e) {
+            return false;
+        }
     }
 
 
     private boolean newer(String date) {
-        //TODO
-        return false;
+        return biggerFirstDouble(date, (double) minYear);
     }
 
     private boolean[] getArrayOfTrues(Phone phone) {
