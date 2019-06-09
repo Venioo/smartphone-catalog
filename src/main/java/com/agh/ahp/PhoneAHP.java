@@ -129,6 +129,9 @@ public class PhoneAHP {
             }
         }
         List<Integer> bestPhones = new ArrayList<>();
+        if (bestValue == 0) {
+            return bestPhones;
+        }
         for (int i = 0; i < phoneValue.length; i++) {
             if (phoneValue[i] == bestValue) {
                 bestPhones.add(i);
