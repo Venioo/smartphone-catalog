@@ -81,7 +81,7 @@ public class PairwisePhones {
 
     private double setOneWeight(Weight w, String firstParameterCode, String secondParameterCode) {
         if (w.contains(secondParameterCode)) {
-            return w.containsOnFirst(firstParameterCode) ? w.getPwCWeight() : w.getInversPwCWeight();
+            return w.containsOnFirst(firstParameterCode) ? w.getInversPwCWeight() : w.getPwCWeight();
         } else {
             return 9;
         }

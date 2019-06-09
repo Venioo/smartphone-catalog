@@ -32,6 +32,22 @@ public class PhoneAHP {
 
     private double minRAM;
 
+    public void setMaxCost(double maxCost) {
+        if (this.minCost < maxCost) {
+            this.maxCost = maxCost;
+        } else {
+            this.maxCost = 1000000;
+        }
+    }
+
+    public void setMaxDisplaySize(double maxDisplaySize) {
+        if (this.maxDisplaySize < maxDisplaySize) {
+            this.maxDisplaySize = maxDisplaySize;
+        } else {
+            this.maxDisplaySize = 1000;
+        }
+    }
+
     private boolean amongCost(String price) {
         try {
             double p = Double.parseDouble(price);
